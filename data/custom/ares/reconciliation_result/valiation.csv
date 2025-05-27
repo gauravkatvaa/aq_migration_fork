@@ -1,0 +1,21 @@
+Entity,Record Count,Rejected,Duplicate
+Billing_Account_cdp,90,0,0
+assets_cdp,352979,78769,0
+address_details_cdp,110,0,0
+acct_att_cdp,19,0,0
+users_details_cdp,490,2,200
+apns_cdp,561,20,0
+APN_IP_Addressess_cdp,255012,0,0
+APN-ip-pools-state-t_cdp,540,0,0
+APN_SP_cdp,648,0,0
+SIM_Order_cdp,542,1,0
+sim_products_cdp,9,0,2
+IMSI_Range_cdp,50,0,0
+Service_Profile_Config_cdp,642,1,0
+customer_details_cdp,648,0,0
+cost_center_cdp,9,0,0
+TriggersDetails,3845,1150,0
+Discount,91,8,0
+white_listing_cdp,119,0,7
+sim_orders_ap_fp_status,530,0,0
+sim_transactions,129728,122,0

@@ -1,0 +1,40 @@
+To create a wheel from the libraries listed in a `requirements.txt` file and then deploy it to another machine, you can follow these steps:
+
+### On the Online Machine:
+
+1. **Create Virtual Environment (Optional)**:
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+
+2. **Install Libraries**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. **Create Wheel Files**:
+    ```bash
+    pip wheel -r requirements.txt -w wheelhouse
+    ```
+
+   This command will download the packages listed in `requirements.txt` and save their wheel files in the `wheelhouse` directory.
+
+4. **Transfer Wheel Files**:
+   
+   Transfer the `wheelhouse` directory containing the wheel files to the target machine using a USB drive, file transfer, or any other means of file transfer.
+
+### On the Offline Machine:
+
+1. **Transfer Wheel Files**:
+   
+   Copy the `wheelhouse` directory to the offline machine.
+
+2. **Install Libraries from Wheel Files**:
+    ```bash
+    pip install --no-index --find-links=wheelhouse -r requirements.txt
+    ```
+
+   This command installs the libraries listed in `requirements.txt` using the wheel files found in the `wheelhouse` directory.
+
+By following these steps, you can create wheel files of libraries online on one machine and deploy them to another machine offline via a `requirements.txt` file. This approach is particularly useful when the offline machine doesn't have direct internet access or when you want to ensure consistent library versions across multiple environments.

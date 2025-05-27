@@ -1,0 +1,3 @@
+"firstName","lastName","primaryPhone","secondaryPhone","email","emailConf","roleId","countryId","timeZoneId","locked","accountId","userName","groupId","userType","userAccountType","supervisorId","resetPasswordAction","reason","secondaryCountryCode","countryCode","sequence_id"
+"name_1","lname_1","123456789","","dummy@mail.com","dummy@mail.com","5978_EC Admin","192",1,"true",9902,"login_9902","0","1","NormalUser","","false","MIGRATION","","",1
+"name_2","lname_2","123456789","","dummy@mail.com","dummy@mail.com","6030_EC Admin","192",1,"true",9903,"login_9903","0","1","NormalUser","","false","MIGRATION","","",2

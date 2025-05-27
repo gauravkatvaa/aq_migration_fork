@@ -1,0 +1,9 @@
+ID,CREATE_DATE,sim_type_id,sim_category,voice_template,sms_template,data_template,ORDER_NUMBER,SERVICE_GRANT,IMEI_LOCK,OLD_PROFILE_STATE,CURRENT_PROFILE_STATE,custom_param_1,custom_param_2,custom_param_3,custom_param_4,custom_param_5,BULK_SERVICE_NAME,FVS_DATA,lock_by_user,imei_lock_setup_date,imei_lock_disable_date
+3492,2015-04-20 00:00:00,3,830,,,,,0,0,,,,,,,,,,,,
+3493,2017-01-24 00:00:00,3,830,,,,,0,0,,,,,,,,,,,,
+3494,2017-01-24 00:00:00,3,830,,,,,0,0,,,,,,,,,,,,
+3495,2017-01-24 00:00:00,3,830,,,,,0,0,,,,,,,,,,,,
+3496,2017-01-24 00:00:00,3,830,,,,,0,0,,,,,,,,,,,,
+3497,2017-01-24 00:00:00,3,830,,,,,0,0,,,,,,,,,,,,
+3498,2017-01-24 00:00:00,3,830,,,,,0,0,,,,,,,,,,,,
+3499,2017-01-24 00:00:00,3,830,,,,,0,0,,,,,,,,,,,,

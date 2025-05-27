@@ -1,0 +1,7 @@
+query,alias
+select max(ACCOUNT_ID) from tenterprise_account,tenterprise_account_max_account_id
+select count(*) from tenterprise_account,tenterprise_account_count
+SELECT COUNT(*) FROM tuser_sim_card WHERE imsi IN (SELECT imsi FROM migration_asset),tuser_sim_card_count
+SELECT COUNT(*) FROM tsim_card WHERE imsi IN (SELECT imsi FROM migration_asset),tsim_card_count
+select count(*) from migration_asset where status=1,migration_asset_count
+SELECT COUNT(*) FROM tsim_card WHERE imsi IN (SELECT CONVERT(imsi USING utf8mb3) FROM migration_asset),tsim_card_count

@@ -1,0 +1,30 @@
+Database_name,query,alias,pre_count,post_count,Diffrence_data
+Aircontrol,select max(id) from users,user_max_id,1693,1693,0
+Aircontrol,select max(id) from role_access,role_access_max_id,6512,6512,0
+Aircontrol,select max(id) from map_user_sim_order,map_user_sim_order_max_id,1001085,1001085,0
+Aircontrol,select max(id) from sim_range,sim_range_max_id,1002345,1002345,0
+Aircontrol,select max(id) from order_shipping_status,order_shipping_status_max_id,11000884,11000884,0
+Aircontrol,select max(id) from sim_event_log,sim_event_log_max_id,11004647,11004647,0
+Aircontrol,select max(id) from accounts,accounts_max_id,3334311,3334311,0
+Aircontrol,select max(id) from assets,assets_max_id,824310,824310,0
+Aircontrol,select max(id) from assets_extended,assets_extended_max_id,824310,824310,0
+Aircontrol,select count(*) from accounts,accounts_count,1814,1782,-32
+Aircontrol,select count(*) from map_user_sim_order,map_user_sim_order_count,792,792,0
+Aircontrol,select count(*) from sim_range,sim_range_count,2215,2215,0
+Aircontrol,select count(*) from order_shipping_status,order_shipping_status_count,769,769,0
+Aircontrol,select count(*) from sim_event_log,sim_event_log_count,4637,4637,0
+Aircontrol,select count(*) from users,users_count,1378,1346,-32
+Aircontrol,select count(*) from role_access,role_access_count,6048,5888,-160
+Aircontrol,select count(*) from assets,assets_count,11082,11082,0
+Aircontrol,select count(*) from assets_extended,assets_extended_count,553050,553050,0
+RouterDB,select max(id) from sim_map,sim_map_max_id,283136,283136,0
+RouterDB,select max(id) from sim_donor_identfiers,sim_donor_identfiers_max_id,815102,815102,0
+Billing,select max(id) from account,account_max_id,3334311,3334311,0
+Billing,select count(id) from account,brstcbilling_s4p2d2.account_count_id,127,95,-32
+Billing,select count(*) from sim_activation,sim_activation_count_id,692,692,0
+Billing,select count(*) from billing_charges,billing_charges_count_id,161,161,0
+BSSDB,select max(ACCOUNT_ID) from tenterprise_account,tenterprise_account_max_account_id,3334311,3334311,0
+BSSDB,select count(*) from tenterprise_account,tenterprise_account_count,5630,5628,-2
+BSSDB,SELECT COUNT(*) FROM tuser_sim_card WHERE imsi IN (SELECT imsi FROM migration_asset),tuser_sim_card_count,0,0,0
+BSSDB,SELECT COUNT(*) FROM tsim_card WHERE imsi IN (SELECT imsi FROM migration_asset),tsim_card_count,0,0,0
+BSSDB,select count(*) from migration_asset where status=1,migration_asset_count,0,0,0

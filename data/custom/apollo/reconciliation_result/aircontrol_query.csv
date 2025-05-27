@@ -1,0 +1,70 @@
+query,alias
+# Combine all configurations into a single dictionary
+db_connections = {
+    'Aircontrol': aircontrol_db_configs,
+    'GoupDB': goup_db_configs,
+    'MigrationDB': migration_db_configs,
+    'RouterDB': router_db_configs,
+    'BSSDB': bss_db_configs,
+    # Add more connections if needed
+}
+
+def convert_config_to_pymysql_format(config):
+    """
+    Converts a database configuration dictionary to the format expected by pymysql.connect().
+    """
+    return {
+        'host': config['HOST'],
+        'user': config['USER'],
+        'password': config['PASSWORD'],
+        'database': config['DATABASE'],
+        'port': config['PORT']
+    }
+
+def execute_query(connection_details, query):
+    """
+    Executes a given query using the provided database connection details and returns the result.
+    """
+    try:
+        with closing(pymysql.connect(**connection_details)) as connection:
+            with closing(connection.cursor()) as cursor:
+                cursor.execute(query)
+                result = cursor.fetchone()
+                return result[0] if result else None
+    except Exception as e:
+        logger_error.error(f"Error executing query '{query}': {e}")
+        return None
+
+def append_to_csv(file_path, data):
+    """
+    Appends data to a CSV file. Creates the file if it doesn't exist.
+    """
+    try:
+        file_exists = os.path.isfile(file_path)
+        with open(file_path, 'a', newline='') as file:
+            writer = csv.writer(file)
+            if not file_exists:
+                writer.writerow(['Database_name', 'query', 'alias', 'count'])
+            writer.writerow(data)
+        logger_info.info(f"Successfully appended data to {file_path}")
+    except Exception as e:
+        logger_error.error(f"Error appending data to CSV: {e}")
+
+def main(csv_file_path):
+    for db_name, db_queries in queries.items():
+        if db_name in db_connections:
+            connection_details = convert_config_to_pymysql_format(db_connections[db_name])
+            for query, alias in db_queries.items():
+                logger_info.info(f"Executing query '{query}' on database '{db_name}'")
+                result_count = execute_query(connection_details, query)
+                if result_count is not None:
+                    data = [db_name, query, alias, result_count]
+                    append_to_csv(csv_file_path, data)
+                else:
+                    logger_error.error(f"Failed to execute query '{query}' on database '{db_name}'")
+        else:
+            logger_error.error(f"No connection string found for database '{db_name}'")
+
+if __name__ == "__main__":
+    csv_file_path = 'pre_max_id.csv'
+    main(csv_file_path)

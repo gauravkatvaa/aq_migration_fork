@@ -1,0 +1,5 @@
+query,alias
+select max(id) from brstcbilling_s4p2d2.account,brstcbilling_s4p2d2.account_max_id
+select count(id) from brstcbilling_s4p2d2.account,brstcbilling_s4p2d2.account_count_id
+select count(*) from sim_activation,sim_activation_count_id
+select count(*) from billing_charges,billing_charges_count_id

@@ -1,0 +1,15 @@
+
+local_csv_file_path = {
+    "csv_file_path": "/home/sorav/maxis_migrations/sim_alias_files/",
+    "error_csv_file_path": "/home/sorav/maxis_migrations/sim_alias_files/error/",
+    "csv_file_path_history": "/home/sorav/maxis_migrations/sim_alias_files/history/",
+    "success_csv_file_path": "/home/sorav/maxis_migrations/sim_alias_files/success/"
+}
+meta_db_config = {
+    "host": "10.235.55.177",
+    "user": "maxisdb",
+    "password": "airlinq@123",
+    "port": 3306,
+    "database": "aircontrol_mg"
+}
+

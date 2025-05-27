@@ -1,0 +1,30 @@
+Database_name,query,alias,count
+Aircontrol,select max(id) from users,user_max_id,2649
+Aircontrol,select max(id) from role_access,role_access_max_id,8388
+Aircontrol,select max(id) from map_user_sim_order,map_user_sim_order_max_id,1001389
+Aircontrol,select max(id) from sim_range,sim_range_max_id,11002802
+Aircontrol,select max(id) from order_shipping_status,order_shipping_status_max_id,11001188
+Aircontrol,select max(id) from sim_event_log,sim_event_log_max_id,11009656
+Aircontrol,select max(id) from accounts,accounts_max_id,3334703
+Aircontrol,select max(id) from assets,assets_max_id,827313
+Aircontrol,select max(id) from assets_extended,assets_extended_max_id,967995
+Aircontrol,select count(*) from accounts,accounts_count,1808
+Aircontrol,select count(*) from map_user_sim_order,map_user_sim_order_count,794
+Aircontrol,select count(*) from sim_range,sim_range_count,2671
+Aircontrol,select count(*) from order_shipping_status,order_shipping_status_count,771
+Aircontrol,select count(*) from sim_event_log,sim_event_log_count,4646
+Aircontrol,select count(*) from users,users_count,1360
+Aircontrol,select count(*) from role_access,role_access_count,5958
+Aircontrol,select count(*) from assets,assets_count,11085
+Aircontrol,select count(*) from assets_extended,assets_extended_count,696735
+RouterDB,select max(id) from sim_map,sim_map_max_id,288770
+RouterDB,select max(id) from sim_donor_identfiers,sim_donor_identfiers_max_id,819701
+Billing,select max(id) from account,account_max_id,3334703
+Billing,select count(id) from account,brstcbilling_s4p2d2.account_count_id,174
+Billing,select count(*) from sim_activation,sim_activation_count_id,692
+Billing,select count(*) from billing_charges,billing_charges_count_id,178
+BSSDB,select max(ACCOUNT_ID) from tenterprise_account,tenterprise_account_max_account_id,3334703
+BSSDB,select count(*) from tenterprise_account,tenterprise_account_count,5670
+BSSDB,SELECT COUNT(*) FROM tuser_sim_card WHERE imsi IN (SELECT imsi FROM migration_asset),tuser_sim_card_count,104872
+BSSDB,SELECT COUNT(*) FROM tsim_card WHERE imsi IN (SELECT imsi FROM migration_asset),tsim_card_count,664943
+BSSDB,select count(*) from migration_asset where status=1,migration_asset_count,19231
